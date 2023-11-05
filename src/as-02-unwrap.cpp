@@ -1056,7 +1056,7 @@ Result_t read_iab_file(CommandOptions& Options, const Kumu::IFileReaderFactory& 
             }
 
             assert(iab_descriptor);
-            FrameBuffer.Capacity(24000); // TODO what size?
+            FrameBuffer.Capacity(Options.fb_size); // TODO what size? Use Options.fb_size as a test.
             last_frame = (ui32_t)iab_descriptor->ContainerDuration;
         }
     }
